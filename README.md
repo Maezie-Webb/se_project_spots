@@ -1,21 +1,18 @@
-# Project 3: Spots
+# Spots-Image sharing site
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+This image sharing site is made so all the elements are displayed correctly on popular screen sizes. It will let the user customize their own profile picture, name, and bio with the ease of a single edit button. After the user has perfected their profile they will be able to easily post their favorite pictures with a description, using the '+ New Post' button. Once the photos are posted, the user will see the 'likes' flow in from the simple tap of the 'heart', located after each of the picture descriptions.
+
+## Technologies and Techniques
+
+- Figma
+- HTML
+- CSS
+- Responsive Design
+
+## Deployment
+
+This website is deployed to Github pages.
+
+[Deployment Link:] (https://username.github.io/repo-name)
