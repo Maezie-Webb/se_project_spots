@@ -15,4 +15,4 @@ This image sharing site is made so all the elements are displayed correctly on p
 
 This website is deployed to Github pages.
 
-[Deployment Link:] (https://username.github.io/repo-name)
+[Deployment Link:] (https://maezie-webb.github.io/se_project_spots/)
