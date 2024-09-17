@@ -8,6 +8,7 @@
   border-radius: 8px;
   height: 190px;
   width: 190px;
+  object-fit: cover;
 }
 .profile__name {
   margin: 0 0 12px;
@@ -38,6 +39,10 @@
   padding: 0;
   opacity: 70%;
   font-weight: 500;
+  cursor: pointer;
+}
+.profile__edit-button:hover {
+  opacity: 100;
 }
 .profile__add-post {
   margin-left: auto;
@@ -53,6 +58,10 @@
   line-height: 16px;
   text-align: left;
   border-radius: 8px;
+  cursor: pointer;
+}
+.profile__add-post:hover {
+  opacity: 0.8;
 }
 .profile__column {
   display: flex;
@@ -64,6 +73,7 @@
     align-items: center;
     max-width: 288px;
     text-align: center;
+    padding-top: 20px;
   }
   .profile__avatar {
     margin-right: 0;
