@@ -16,3 +16,14 @@ This image sharing site is made so all the elements are displayed correctly on p
 This website is deployed to Github pages.
 
 [Deployment Link:] (https://maezie-webb.github.io/se_project_spots/)
+
+## Video Description
+
+<div>
+    <a href="https://www.loom.com/share/72d867e1f5fb4612970994443e204185">
+      <p>se_project_spots/README.md at main · Maezie-Webb/se_project_spots - Google Chrome - 19 September 2024 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/72d867e1f5fb4612970994443e204185">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/72d867e1f5fb4612970994443e204185-ffc4ad214f84975a-full-play.gif">
+    </a>
+  </div>
