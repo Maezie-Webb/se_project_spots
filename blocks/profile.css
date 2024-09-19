@@ -92,8 +92,10 @@
   .profile__add-post {
     margin: 20px 0 0;
     width: 288px;
-    height: 88px;
+    padding: 0;
     justify-content: center;
     align-items: center;
+    height: 52px;
+    justify-content: center;
   }
 }
