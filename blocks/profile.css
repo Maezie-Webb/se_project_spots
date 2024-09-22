@@ -82,6 +82,7 @@
   }
   .profile__name {
     margin: 12px 0 0;
+    font-size: 20px;
   }
   .profile__description {
     margin: 6px 0 32px;
