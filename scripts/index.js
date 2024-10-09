@@ -39,7 +39,6 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  console.log(data);
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -50,18 +49,17 @@ function getCardElement(data) {
   cardNameEl.textContent = data.name;
   cardImgEl.src = data.link;
   cardImgEl.alt = data.name;
-  console.log(cardImgEl);
   return cardElement;
 }
 
 function openModal() {
   ModalNameInput.value = ProfileName.textContent;
   modalDescriptionInput.value = profileDescription.textContent;
-  editProfileModal.classList.add("modal__opened");
+  editProfileModal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  editProfileModal.classList.remove("modal__opened");
+  editProfileModal.classList.remove("modal_opened");
 }
 function HandleEditFormsubmit(evt) {
   evt.preventDefault();
