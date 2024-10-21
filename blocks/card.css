@@ -1,5 +1,9 @@
 .card {
   padding: 0;
+  position: relative;
+}
+.card__delete-button {
+  position: absolute;
 }
 .card__img {
   height: 413px;
@@ -37,6 +41,13 @@
 .card__like-button:hover {
   opacity: 100;
   background-color: #fcf5e5;
+}
+.card__like-button_liked {
+  background-image: url(../images/card-likeButton-liked.svg);
+  opacity: 1;
+}
+.card__like-button_liked:hover {
+  background-image: url(../images/card-like-button-hover.svg);
 }
 @media screen and (max-width: 627px) {
   .card__img {
