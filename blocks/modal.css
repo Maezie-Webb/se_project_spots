@@ -38,6 +38,7 @@
 
 .modal__exit-btn {
   position: absolute;
+  background-image: url(../images/exit-btn.svg);
   top: 32px;
   right: 50px;
   width: 40px;
