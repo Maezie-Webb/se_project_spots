@@ -4,6 +4,16 @@
 }
 .card__delete-button {
   position: absolute;
+  background-image: url(../images/delete-button-trashCan.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border-style: none;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .card__img {
   height: 413px;
