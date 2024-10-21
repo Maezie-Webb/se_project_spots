@@ -32,6 +32,7 @@
 
 .modal__image {
   width: 100%;
+  object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
 }
@@ -47,6 +48,14 @@
   border: none;
   background-color: white;
   padding: 0;
+}
+
+.modal__exit-btn_preview {
+  background-image: url(../images/exit-button-preview.svg);
+  background-color: transparent;
+  top: 0px;
+  right: -52.5px;
+  opacity: 1;
 }
 
 .modal__title {
