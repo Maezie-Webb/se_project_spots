@@ -15,6 +15,9 @@
   right: 10px;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.card__delete-button:hover {
+  background-image: url(../images/delete-button-hover.svg);
+}
 .card__img {
   height: 413px;
   width: 100%;
