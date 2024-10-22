@@ -28,13 +28,29 @@
 }
 .modal__container_type_preview {
   padding: 0%;
+  background-color: transparent;
 }
 
 .modal__image {
   width: 100%;
+  margin-bottom: 8px;
   object-fit: contain;
+  border-radius: 8px;
   max-width: 80vw;
   max-height: 80vh;
+}
+.modal__caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  padding: 4px 8px;
+  max-width: max-content;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background-color: rgba(33, 33, 33, 1);
 }
 
 .modal__exit-btn {
@@ -121,5 +137,16 @@
   }
   .modal__input {
     font-size: 16px;
+  }
+  .modal__container_type_preview {
+    width: 288px;
+    padding: 0;
+  }
+  .modal__exit-btn_preview {
+    top: -40px;
+  }
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19.2px;
   }
 }

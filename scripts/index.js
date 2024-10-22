@@ -23,6 +23,10 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Golden gate bridge",
+    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
 const profileEditButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -46,8 +50,10 @@ const cardNameInput = cardForm.querySelector("#add-post-caption-input");
 const cardLinkInput = cardForm.querySelector("#add-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
-const previewModalCaption = previewModal.querySelector("modal__caption");
-
+const previewModalCaption = previewModal.querySelector(".modal__caption");
+const previewModalCloseButton = previewModal.querySelector(
+  ".modal__exit-btn_preview"
+);
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -72,7 +78,10 @@ function getCardElement(data) {
 
   cardImgEl.addEventListener("click", () => {
     openModal(previewModal);
+
     previewModalImage.src = data.link;
+    previewModalImage.alt = data.name;
+    previewModalCaption.textContent = data.name;
   });
 
   return cardElement;
@@ -116,6 +125,10 @@ cardCloseButton.addEventListener("click", () => {
 });
 editprofileForm.addEventListener("submit", HandleEditFormsubmit);
 cardForm.addEventListener("submit", HandleCardFormSubmit);
+
+previewModalCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
