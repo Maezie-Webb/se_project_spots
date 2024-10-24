@@ -101,6 +101,8 @@ function HandleEditFormsubmit(evt) {
   ProfileName.textContent = ModalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
   closeModal(editProfileModal);
+  ModalNameInput.value = "";
+  descriptionInput.value = "";
 }
 function HandleCardFormSubmit(evt) {
   evt.preventDefault();
@@ -108,6 +110,8 @@ function HandleCardFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(cardModal);
+  cardNameInput.value = "";
+  cardLinkInput.value = "";
 }
 
 profileEditButton.addEventListener("click", () => {
