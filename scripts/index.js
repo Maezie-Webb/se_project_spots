@@ -30,10 +30,10 @@ const initialCards = [
 ];
 const profileEditButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const ProfileName = document.querySelector(".profile__name");
+const profileName = document.querySelector(".profile__name");
 const editExitButton = editProfileModal.querySelector(".modal__exit-btn");
-const editprofileForm = editProfileModal.querySelector(".modal__form");
-const ModalNameInput = editProfileModal.querySelector("#profile-name-input");
+const editProfileForm = editProfileModal.querySelector(".modal__form");
+const modalNameInput = editProfileModal.querySelector("#profile-name-input");
 const profileDescription = document.querySelector(".profile__description");
 const descriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
@@ -88,8 +88,6 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
-  ModalNameInput.value = ProfileName.textContent;
-  descriptionInput.value = profileDescription.textContent;
   modal.classList.add("modal_opened");
 }
 
@@ -98,10 +96,10 @@ function closeModal(modal) {
 }
 function HandleEditFormsubmit(evt) {
   evt.preventDefault();
-  ProfileName.textContent = ModalNameInput.value;
+  profileName.textContent = ModalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
   closeModal(editProfileModal);
-  ModalNameInput.value = "";
+
   descriptionInput.value = "";
 }
 function HandleCardFormSubmit(evt) {
@@ -110,8 +108,7 @@ function HandleCardFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(cardModal);
-  cardNameInput.value = "";
-  cardLinkInput.value = "";
+  evt.target.reset();
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -127,7 +124,7 @@ addPostButton.addEventListener("click", () => {
 cardCloseButton.addEventListener("click", () => {
   closeModal(cardModal);
 });
-editprofileForm.addEventListener("submit", HandleEditFormsubmit);
+editProfileForm.addEventListener("submit", HandleEditFormsubmit);
 cardForm.addEventListener("submit", HandleCardFormSubmit);
 
 previewModalCloseButton.addEventListener("click", () => {
