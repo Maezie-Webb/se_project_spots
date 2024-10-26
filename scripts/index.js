@@ -96,7 +96,7 @@ function closeModal(modal) {
 }
 function HandleEditFormsubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = ModalNameInput.value;
+  profileName.textContent = modalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
   closeModal(editProfileModal);
 
