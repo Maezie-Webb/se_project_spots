@@ -28,7 +28,7 @@ const initialCards = [
     link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 ];
-const profileEditButton = document.querySelector(".profile__edit-button");
+const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const profileName = document.querySelector(".profile__name");
 const editExitButton = editProfileModal.querySelector(".modal__exit-btn");
@@ -94,15 +94,19 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
-function HandleEditFormsubmit(evt) {
+function openEditProfile(evt) {
+  evt.preventDefault();
+  modalNameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
+  openModal(editProfileModal);
+}
+function handleEditFormsubmit(evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
   closeModal(editProfileModal);
-
-  descriptionInput.value = "";
 }
-function HandleCardFormSubmit(evt) {
+function handleCardFormSubmit(evt) {
   evt.preventDefault();
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
@@ -110,10 +114,7 @@ function HandleCardFormSubmit(evt) {
   closeModal(cardModal);
   evt.target.reset();
 }
-
-profileEditButton.addEventListener("click", () => {
-  openModal(editProfileModal);
-});
+editProfileButton.addEventListener("click", openEditProfile);
 
 editExitButton.addEventListener("click", () => {
   closeModal(editProfileModal);
@@ -124,8 +125,8 @@ addPostButton.addEventListener("click", () => {
 cardCloseButton.addEventListener("click", () => {
   closeModal(cardModal);
 });
-editProfileForm.addEventListener("submit", HandleEditFormsubmit);
-cardForm.addEventListener("submit", HandleCardFormSubmit);
+editProfileForm.addEventListener("submit", handleEditFormsubmit);
+cardForm.addEventListener("submit", handleCardFormSubmit);
 
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
