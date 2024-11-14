@@ -111,8 +111,9 @@ function handleCardFormSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  closeModal(cardModal);
   evt.target.reset();
+  disableButton(cardSubmitButton);
+  closeModal(cardModal);
 }
 editProfileButton.addEventListener("click", openEditProfile);
 
