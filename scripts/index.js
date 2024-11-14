@@ -98,13 +98,13 @@ function openEditProfile(evt) {
   evt.preventDefault();
   modalNameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
-  openModal(editProfileModal);
+  openModal(editProfileModal, settings);
 }
 function handleEditFormsubmit(evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
-  closeModal(editProfileModal);
+  closeModal(editProfileModal, settings);
 }
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
