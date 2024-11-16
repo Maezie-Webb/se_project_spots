@@ -89,17 +89,31 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("mousedown", closeModalByOverlay);
+  document.addEventListener("keydown", handleEscKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("mousedown", closeModalByOverlay);
+  document.removeEventListener("keydown", handleEscKey);
 }
-function openEditProfile(evt) {
-  evt.preventDefault();
-  modalNameInput.value = profileName.textContent;
-  descriptionInput.value = profileDescription.textContent;
-  openModal(editProfileModal, settings);
+
+function closeModalByOverlay(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
 }
+
+function handleEscKey(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function handleEditFormsubmit(evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
@@ -115,7 +129,16 @@ function handleCardFormSubmit(evt) {
   disableButton(cardSubmitButton, settings);
   closeModal(cardModal);
 }
-editProfileButton.addEventListener("click", openEditProfile);
+editProfileButton.addEventListener("click", () => {
+  modalNameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
+  resetValidation(
+    editProfileForm,
+    [modalNameInput, descriptionInput],
+    settings
+  );
+  openModal(editProfileModal);
+});
 
 editExitButton.addEventListener("click", () => {
   closeModal(editProfileModal);
