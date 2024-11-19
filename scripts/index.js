@@ -118,7 +118,7 @@ function handleEditFormsubmit(evt) {
   evt.preventDefault();
   profileName.textContent = modalNameInput.value;
   profileDescription.textContent = descriptionInput.value;
-  closeModal(editProfileModal, settings);
+  closeModal(editProfileModal);
 }
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
